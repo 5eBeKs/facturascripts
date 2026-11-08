@@ -585,7 +585,7 @@ class DocumentStitcher extends Controller
                     }
                 } else {
                     $pending = max(0, $line->cantidad - $line->servido);
-                    if ($quantity <= $pending) {
+                    if ($quantity >= 0 && $quantity <= $pending) {
                         continue;
                     }
                 }
